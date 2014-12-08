@@ -1,12 +1,11 @@
 @mixin pedir_button
   background: $button_color
-  padding: 0.2em 1.2em
-  border-radius: 0.4em
+  padding: 0.5em 1.2em
   border: none
   text-align: center
   color: $button_text_color
   font-weight: $bold_weight
-  font-size: 2.2em
+  font-size: 1.5em
   line-height: 100%
   text-decoration: none
   width: auto
@@ -16,5 +15,20 @@
     color: $button_text_color
 .button
   +pedir_button
-.info
-  margin-bottom: 4em
+.info, .newsletter
+  +span-columns(6)
+  padding-bottom: 4em
+.newsletter
+  [type=text]
+    margin: 0
+  [type=submit]
+    width: 100%
+    padding: 0.5em 0
+  +media($desktop)
+    [type=text]
+      font-size: 1.08em
+      width: 60%
+      float: left
+    [type=submit]
+      width: 40%
+      float: right
