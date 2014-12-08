@@ -1,0 +1,54 @@
+#pre_header_wrapper
+  background-color: $container_color
+  header
+    +outer-container
+    .logo
+      float: left
+      img
+        width: 2.2em
+        vertical-align: middle
+#header_wrapper
+  header
+    text-align: center
+    +outer-container
+#post_header_wrapper
+  background-color: $button_color
+  padding: 1em 0
+  header
+    +outer-container
+#content
+  padding: 4em 0
+  +outer-container
+  >section
+    +span-columns(6)
+#footer_wrapper
+  padding: 4em 0 2em 0
+  background: $footer_color
+  footer
+    +outer-container
+    text-align: center
+    a
+      text-decoration: none
+    h4
+      +span-columns(6)
+      margin-bottom: 2em
+      a
+        color: $footer_text_color
+        text-decoration: none
+        font-size: 2em
+        line-height: 1.2em
+        &:hover
+          opacity: 0.8
+    h5
+      color: $footer_text_color
+    .credits
+      +span-columns(6)
+    .links
+      +span-columns(6)
+      +media($desktop)
+        +span-columns(6)
+        +shift(3)
+      margin-bottom: 2em
+      h5
+        +span-columns(2)
+        +omega(3n)
