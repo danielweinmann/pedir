@@ -1,54 +1,66 @@
 #pre_header_wrapper
-  background-color: $container_color
-  header
-    +outer-container
-    .logo
-      float: left
-      img
-        width: 2.2em
-        vertical-align: middle
+  .photo
+    img
+      width: 40%
+      float: right
+  .text
+    padding-top: 3vw
+    +media($desktop)
+      padding: 3vw 10vw
+    h1
+      font-size: 8vw
+      margin: 0
+      +media($desktop)
+        font-size: 4vw
+    h2
+      background-color: $button_color
+      margin: 0
+      font-size: 4vw
+      line-height: 5vw
+      padding: 4vw 0
+      clear: both
+      +media($desktop)
+        clear: none
+        padding: 0
+        padding-top: 0.5vw
+        background-color: transparent
+        font-size: 2.2vw
+        line-height: 3vw
+    strong
+      font-weight: $normal_weight
+      font-size: 5vw
+      +media($desktop)
+        font-size: 3vw
 #header_wrapper
   header
     text-align: center
     +outer-container
+    width: 82%
+    +media($tablet)
+      width: 80%
+    +media($desktop)
+      width: 60%
 #post_header_wrapper
-  background-color: $button_color
+  clear: both
+  background-color: $text_color
+  color: $link_color
+  h3
+    color: $link_color
   padding: 1em 0
   header
     +outer-container
+    width: 82%
+    +media($tablet)
+      width: 80%
+    +media($desktop)
+      width: 60%
 #content
-  padding: 4em 0
   +outer-container
+  padding-top: 4em
+  width: 82%
+  +media($tablet)
+    width: 80%
+  +media($desktop)
+    width: 60%
   >section
     +span-columns(6)
-#footer_wrapper
-  padding: 4em 0 2em 0
-  background: $footer_color
-  footer
-    +outer-container
-    text-align: center
-    a
-      text-decoration: none
-    h4
-      +span-columns(6)
-      margin-bottom: 2em
-      a
-        color: $footer_text_color
-        text-decoration: none
-        font-size: 2em
-        line-height: 1.2em
-        &:hover
-          opacity: 0.8
-    h5
-      color: $footer_text_color
-    .credits
-      +span-columns(6)
-    .links
-      +span-columns(6)
-      +media($desktop)
-        +span-columns(6)
-        +shift(3)
-      margin-bottom: 2em
-      h5
-        +span-columns(2)
-        +omega(3n)

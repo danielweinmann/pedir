@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
-  helper_method :namespace, :add_headline_and_article!, :suppress_headline_and_article!, :add_headline_and_article?, :add_logo!, :suppress_logo!, :add_logo?
+  helper_method :namespace, :add_headline_and_article!, :suppress_headline_and_article!, :add_headline_and_article?
 
   def add_headline_and_article?
     !@suppress_headline_and_article
@@ -13,18 +13,6 @@ class ApplicationController < ActionController::Base
 
   def suppress_headline_and_article!
     @suppress_headline_and_article = true
-  end
-
-  def add_logo?
-    !@suppress_logo
-  end
-
-  def add_logo!
-    @suppress_logo = false
-  end
-
-  def suppress_logo!
-    @suppress_logo = true
   end
 
   def namespace
