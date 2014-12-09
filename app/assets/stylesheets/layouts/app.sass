@@ -6,32 +6,55 @@
         width: 36%
       float: right
   .text
+    padding-top: 0.7em
     padding-top: 3vw
+    +media($tablet)
+      padding-top: 1.5em
+      padding-top: 3vw
     +media($desktop)
+      padding: 2em 8em
       padding: 3vw 10vw
     h1
+      font-size: 2em
       font-size: 8vw
       margin: 0
+      +media($tablet)
+        font-size: 4em
+        font-size: 8vw
       +media($desktop)
+        font-size: 3.4em
         font-size: 4vw
     h2
       background-color: $button_color
       margin: 0
+      font-size: 1em
+      line-height: 1.2em
       font-size: 4vw
       line-height: 5vw
+      padding: 1em 0
       padding: 4vw 0
       clear: both
+      +media($tablet)
+        font-size: 2em
+        line-height: 1.2em
+        font-size: 4vw
+        line-height: 5vw
       +media($desktop)
         clear: none
         padding: 0
+        padding-top: 0.5em
         padding-top: 0.5vw
         background-color: transparent
+        font-size: 1.8em
         font-size: 2.2vw
+        line-height: 1.5em
         line-height: 3vw
     strong
       font-weight: $normal_weight
+      font-size: 1.3em
       font-size: 5vw
       +media($desktop)
+        font-size: 1.3em
         font-size: 3vw
 #header_wrapper
   header
